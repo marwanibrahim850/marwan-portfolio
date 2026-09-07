@@ -1,111 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import profileImage from '../assets/WhatsApp Image 2026-09-07 at 5.11.17 AM.jpeg';
+
+const expertise = [
+  ['Frontend Development', 'React, JavaScript, HTML5, CSS3, Tailwind CSS'],
+  ['Backend Development', 'PHP, MySQL, REST APIs, Database Design'],
+  ['Tools & Technologies', 'Git, GitHub, Responsive Design, Web Optimization'],
+];
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setIsVisible(true); observer.unobserve(entry.target); } }, { threshold: 0.1 });
     const element = document.getElementById('about');
     if (element) observer.observe(element);
-
-    return () => {
-      if (element) observer.unobserve(element);
-    };
+    return () => { if (element) observer.unobserve(element); };
   }, []);
 
   return (
-    <section id="about" className="py-16 md:py-20 bg-linear-to-b from-slate-900 to-slate-800 relative">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`transition-all duration-1000 ${isVisible ? 'slide-up' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
-            <div className="w-20 h-1 bg-linear-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Left side - Profile image */}
+    <section id="about" className="relative overflow-hidden bg-linear-to-b from-slate-900 to-slate-800 py-20 md:py-24">
+      <div className="absolute left-1/4 top-1/2 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl" />
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className={`transition-all duration-1000 ${isVisible ? 'slide-up' : 'translate-y-10 opacity-0'}`}>
+          <div className="mb-12 text-center"><h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">About Me</h2><div className="mx-auto h-1 w-20 rounded-full bg-linear-to-r from-blue-400 to-cyan-400" /></div>
+          <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-20">
             <div className="flex justify-center">
-              <div className="relative w-full max-w-sm aspect-4/5">
-                <div className="absolute -inset-3 rounded-3xl bg-linear-to-br from-blue-500/30 to-cyan-500/20 blur-2xl"></div>
-                <div className="relative h-full overflow-hidden rounded-3xl border border-blue-400/40 bg-slate-800 shadow-2xl shadow-blue-950/50">
-                  <img
-                    src={profileImage}
-                    alt="Marwan Ibrahim"
-                    className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 via-transparent to-transparent"></div>
-                </div>
+              <div className="relative w-full max-w-md rounded-3xl border border-blue-400/25 bg-slate-950/75 p-5 shadow-2xl shadow-blue-950/50">
+                <div className="absolute -inset-4 -z-10 rounded-3xl bg-cyan-400/10 blur-2xl" />
+                <div className="mb-6 flex items-center gap-2 border-b border-slate-700 pb-4"><span className="h-3 w-3 rounded-full bg-rose-400" /><span className="h-3 w-3 rounded-full bg-amber-300" /><span className="h-3 w-3 rounded-full bg-emerald-400" /><span className="ml-3 text-xs text-slate-500">developer.js</span></div>
+                <div className="space-y-3 font-mono text-sm leading-relaxed sm:text-base"><p><span className="text-violet-300">const</span> <span className="text-cyan-300">developer</span> <span className="text-slate-300">= {'{'}</span></p><p className="pl-5"><span className="text-blue-300">name:</span> <span className="text-emerald-300">'Marwan Ibrahim'</span>,</p><p className="pl-5"><span className="text-blue-300">role:</span> <span className="text-emerald-300">'Full Stack Developer'</span>,</p><p className="pl-5"><span className="text-blue-300">stack:</span> <span className="text-emerald-300">['React', 'PHP', 'MySQL','tailwindCSS', 'HTML', 'CSS ' ]</span>,</p><p className="pl-5"><span className="text-blue-300">focus:</span> <span className="text-emerald-300">'Clean web experiences'</span></p><p><span className="text-slate-300">{'}'};</span></p><div className="mt-6 rounded-xl border border-cyan-400/15 bg-slate-900 p-4 text-xs text-slate-400"><span className="text-cyan-300">// </span>Building solutions that are responsive, maintainable, and ready to grow.</div></div>
               </div>
             </div>
-
-            {/* Right side - About text */}
-            <div className="space-y-6">
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                I am a Full Stack Web Developer specialized in building responsive and scalable web applications. 
-                With a passion for clean code and modern development practices, I craft digital solutions that 
-                combine aesthetic design with robust functionality.
-              </p>
-
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                My expertise spans across:
-              </p>
-
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="shrink-0 w-6 h-6 mt-1">
-                    <svg className="w-full h-full text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Frontend Development</h4>
-                    <p className="text-gray-400">React, JavaScript, HTML, CSS, Tailwind CSS</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="shrink-0 w-6 h-6 mt-1">
-                    <svg className="w-full h-full text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Backend Development</h4>
-                    <p className="text-gray-400">PHP, MySQL, RESTful APIs, Database Design</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="shrink-0 w-6 h-6 mt-1">
-                    <svg className="w-full h-full text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Tools & Technologies</h4>
-                    <p className="text-gray-400">Git, GitHub, Responsive Design, Web Optimization</p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-400 pt-4">
-                Whether you need a stunning landing page, a complex web application, or bug fixes and optimizations, 
-                I'm here to bring your vision to life with professional, scalable solutions.
-              </p>
-            </div>
+            <div className="space-y-7"><p className="text-lg leading-relaxed text-slate-200 md:text-xl">I am a Full Stack Web Developer specialized in building responsive and scalable web applications. I create modern digital solutions using React, JavaScript, PHP, and MySQL with a focus on clean code, performance, and user experience.</p><p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">My expertise spans across:</p><div className="space-y-4">{expertise.map(([title, details]) => <div key={title} className="flex gap-3 rounded-xl border border-slate-700 bg-slate-800/50 p-4 transition-colors hover:border-blue-400/40"><span className="mt-0.5 text-cyan-300">✓</span><div><h3 className="mb-1 text-base font-semibold text-white">{title}</h3><p className="text-sm leading-relaxed text-slate-400">{details}</p></div></div>)}</div></div>
           </div>
         </div>
       </div>

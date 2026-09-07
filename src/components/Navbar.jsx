@@ -13,10 +13,10 @@ const Navbar = ({ activeSection }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const sections = ['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'];
+  const sections = ['Home', 'About', 'Skills', 'Projects', 'What I Do', 'Services', 'Contact'];
 
   const handleScroll = (section) => {
-    const element = document.getElementById(section.toLowerCase());
+    const element = document.getElementById(section === 'What I Do' ? 'capabilities' : section.toLowerCase());
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsOpen(false);
@@ -34,7 +34,8 @@ const Navbar = ({ activeSection }) => {
           {/* Logo */}
           <div className="shrink-0">
             <a
-              href="#"
+              href="#home"
+              onClick={() => setIsOpen(false)}
               className="text-2xl md:text-3xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
             >
               MI
@@ -48,7 +49,7 @@ const Navbar = ({ activeSection }) => {
                 key={section}
                 onClick={() => handleScroll(section)}
                 className={`transition-all duration-300 font-medium ${
-                  activeSection === section.toLowerCase()
+                  activeSection === (section === 'What I Do' ? 'capabilities' : section.toLowerCase())
                     ? 'text-blue-400 border-b-2 border-blue-400'
                     : 'text-gray-300 hover:text-blue-400'
                 }`}
@@ -62,6 +63,8 @@ const Navbar = ({ activeSection }) => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isOpen}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors"
             >
               <svg
@@ -91,7 +94,7 @@ const Navbar = ({ activeSection }) => {
                 key={section}
                 onClick={() => handleScroll(section)}
                 className={`block w-full text-left px-3 py-2 rounded-md font-medium transition-colors ${
-                  activeSection === section.toLowerCase()
+                  activeSection === (section === 'What I Do' ? 'capabilities' : section.toLowerCase())
                     ? 'text-blue-400 bg-slate-800'
                     : 'text-gray-300 hover:text-blue-400 hover:bg-slate-800'
                 }`}

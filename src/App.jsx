@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Capabilities from './components/Capabilities';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -14,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'services', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'capabilities', 'services', 'contact'];
       
       for (let section of sections) {
         const element = document.getElementById(section);
@@ -40,6 +41,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Capabilities />
         <Services />
         <Contact />
       </main>

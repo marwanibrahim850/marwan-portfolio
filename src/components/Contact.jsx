@@ -8,7 +8,6 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,19 +36,12 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitted(true);
-      setLoading(false);
-      setFormData({ name: '', email: '', message: '' });
-
-      // Reset success message after 3 seconds
-      setTimeout(() => setSubmitted(false), 3000);
-    }, 1000);
+    const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\nFrom: ${formData.name}\nReply to: ${formData.email}`);
+    window.location.href = `mailto:i.marwan2006@gmail.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
   };
 
   const contactInfo = [
@@ -63,7 +55,7 @@ const Contact = () => {
       icon: '💼',
       title: 'LinkedIn',
       value: 'Marwan Ibrahim',
-      link: 'www.linkedin.com/in/marwan-ibrahim-0865bb3aa',
+      link: 'https://www.linkedin.com/in/marwan-ibrahim-0865bb3aa',
     },
     {
       icon: '🐙',
@@ -163,8 +155,9 @@ const Contact = () => {
                     <svg className="w-16 h-16 text-green-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-                    <p className="text-gray-300 text-center">Your message has been sent successfully. I'll get back to you soon!</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Finish in your email app</h3>
+                    <p role="status" className="text-gray-300 text-center">Send the draft in your email app to complete your inquiry. If it did not open, email i.marwan2006@gmail.com directly.</p>
+                    <button type="button" onClick={() => setSubmitted(false)} className="btn btn-outline mt-6">Back to message</button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -218,22 +211,14 @@ const Contact = () => {
 
                     <button
                       type="submit"
-                      disabled={loading}
                       className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
-                      {loading ? (
                         <>
-                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          Send Message
+                          Open Email Draft
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
                         </>
-                      )}
                     </button>
                   </form>
                 )}

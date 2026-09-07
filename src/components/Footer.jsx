@@ -22,6 +22,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               Full Stack Web Developer crafting modern, responsive web solutions.
             </p>
+            <p className="mt-3 text-sm font-semibold text-cyan-300">Available for freelance projects</p>
           </div>
 
           {/* Quick Links */}
@@ -47,9 +48,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {['Full Stack Dev', 'React Apps', 'PHP Backend', 'Bug Fixing'].map((service) => (
                 <li key={service}>
-                  <span className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm cursor-pointer">
+                  <a href="#services" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm cursor-pointer">
                     {service}
-                  </span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -59,7 +60,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact</h4>
             <a
-              href="mailto:marwan.ibrahim850@gmail.com"
+              href="mailto:i.marwan2006@gmail.com"
               className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm mb-2 block"
             >
               Email
@@ -73,7 +74,7 @@ const Footer = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/marwan-ibrahim-"
+              href="https://www.linkedin.com/in/marwan-ibrahim-0865bb3aa"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm block"
@@ -99,7 +100,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/marwan-ibrahim-"
+              href="https://www.linkedin.com/in/marwan-ibrahim-0865bb3aa"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center bg-slate-800 hover:bg-blue-600 rounded-full text-gray-400 hover:text-white transition-all duration-300"
@@ -110,7 +111,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="mailto:marwan.ibrahim850@gmail.com"
+              href="mailto:i.marwan2006@gmail.com"
               className="w-10 h-10 flex items-center justify-center bg-slate-800 hover:bg-blue-600 rounded-full text-gray-400 hover:text-white transition-all duration-300"
               aria-label="Email"
             >
@@ -132,11 +133,7 @@ const Footer = () => {
       {/* Scroll to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 hover:opacity-100 group"
-        style={{
-          opacity: typeof window !== 'undefined' && window.scrollY > 300 ? 1 : 0,
-          pointerEvents: typeof window !== 'undefined' && window.scrollY > 300 ? 'auto' : 'none',
-        }}
+        className="absolute bottom-4 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
         aria-label="Scroll to top"
       >
         <svg className="w-6 h-6 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

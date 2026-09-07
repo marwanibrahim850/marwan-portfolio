@@ -25,42 +25,42 @@ const Services = () => {
   const services = [
     {
       title: 'Full Stack Development',
-      description: 'End-to-end web application development combining frontend and backend technologies for complete solutions.',
+      description: 'Complete web solutions that are structured to perform and scale with your business.',
       icon: '🚀',
       features: ['Custom Solutions', 'Scalable Architecture', 'Performance Optimization'],
       color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'React Development',
-      description: 'Modern, interactive React applications with component-based architecture and smooth user experiences.',
+      description: 'Fast, interactive React interfaces designed around a clear user experience.',
       icon: '⚛️',
       features: ['Component Design', 'State Management', 'Real-time Features'],
       color: 'from-cyan-500 to-blue-500',
     },
     {
       title: 'Frontend Development',
-      description: 'Beautiful, responsive websites with modern CSS techniques and pure JavaScript without unnecessary dependencies.',
+      description: 'Responsive, polished websites that look reliable on every screen.',
       icon: '🎨',
       features: ['Responsive Design', 'UI/UX Focus', 'Cross-browser Compatible'],
       color: 'from-purple-500 to-pink-500',
     },
     {
       title: 'PHP & MySQL Backend',
-      description: 'Robust backend development with PHP and MySQL for reliable server-side solutions and database management.',
+      description: 'Reliable PHP and MySQL foundations for data-driven web products.',
       icon: '🗄️',
       features: ['API Development', 'Database Design', 'Server Security'],
       color: 'from-orange-500 to-red-500',
     },
     {
       title: 'Website Bug Fixing',
-      description: 'Identify and fix bugs, optimize performance, and improve overall website functionality and user experience.',
+      description: 'Find issues quickly and restore a smooth, dependable website experience.',
       icon: '🔧',
       features: ['Bug Diagnosis', 'Performance Tuning', 'Code Review'],
       color: 'from-green-500 to-emerald-500',
     },
     {
       title: 'Website Optimization',
-      description: 'Enhance website speed, SEO, and overall performance for better user engagement and search rankings.',
+      description: 'Improve speed, mobile usability, and the quality of your site experience.',
       icon: '⚡',
       features: ['Speed Optimization', 'SEO Enhancement', 'Mobile Optimization'],
       color: 'from-yellow-500 to-orange-500',
@@ -78,7 +78,7 @@ const Services = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Services</h2>
             <div className="w-20 h-1 bg-linear-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
-            <p className="text-gray-400 mt-4 text-lg">Professional web development services tailored to your needs</p>
+            <p className="text-gray-400 mt-4 text-lg">Practical development support built around your goals and your users.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,8 +126,8 @@ const Services = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <button className={`w-full py-2 px-4 rounded-lg font-semibold transition-all duration-300 bg-linear-to-r ${service.color} text-white hover:shadow-lg opacity-80 group-hover:opacity-100`}>
-                    Learn More
+                  <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className={`w-full py-2 px-4 rounded-lg font-semibold transition-all duration-300 bg-linear-to-r ${service.color} text-white hover:shadow-lg opacity-80 group-hover:opacity-100`}>
+                    Discuss Your Project
                   </button>
                 </div>
               </div>
