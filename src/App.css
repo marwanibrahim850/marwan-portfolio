@@ -1,0 +1,66 @@
+/* App specific styles - Additional to Tailwind CSS and index.css */
+
+main {
+  width: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+  overflow: hidden;
+}
+
+.max-w-6xl {
+  width: 100%;
+}
+
+main .grid > * {
+  min-width: 0;
+}
+
+/* Animation delay utilities */
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Scroll behavior enhancement */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav,
+  footer {
+    display: none;
+  }
+}
+
+/* App specific styles - Additional to Tailwind CSS and index.css */
+
+/* Smooth page transitions */
+main {
+  min-height: 100vh;
+}
+
+/* Animation delay utilities */
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Scroll behavior enhancement */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav,
+  footer {
+    display: none;
+  }
+}
