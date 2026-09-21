@@ -1,52 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Capabilities from './components/Capabilities';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React from 'react';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import PortfolioPage from './pages/PortfolioPage';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'capabilities', 'services', 'contact'];
-      
-      for (let section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="bg-slate-900">
-      <Navbar activeSection={activeSection} />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Capabilities />
-        <Services />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 

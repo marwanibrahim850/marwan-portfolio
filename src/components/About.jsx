@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const expertise = [
-  ['Frontend Development', 'React, JavaScript, HTML5, CSS3, Tailwind CSS'],
+  ['Frontend Development', 'React, JavaScript, HTML, CSS, Tailwind CSS'],
   ['Backend Development', 'PHP, MySQL, REST APIs, Database Design'],
   ['Tools & Technologies', 'Git, GitHub, Responsive Design, Web Optimization'],
 ];
