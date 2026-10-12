@@ -41,7 +41,7 @@ function App() {
 
   return (
     {isLoading && <LoadingScreen />}
-        <div className="bg-[#08090a] font-body-default text-[#e8e6df] antialiased architectural-grid min-h-screen selection:bg-[#ff4d00] selection:text-[#08090a] overflow-x-hidden">
+        <div className="bg-[#08090a] font-body-default text-[#e8e6df] antialiased architectural-grid min-h-screen selection:bg-[#ff4d00] selection:text-[#08090a]">
 
       {/* Fixed Architectural Header */}
       <Navbar activeSection={activeSection} />
