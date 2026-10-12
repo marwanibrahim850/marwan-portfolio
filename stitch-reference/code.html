@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.architectural-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface":"#e3e2e3","primary-fixed-dim":"#ffb59e","on-tertiary":"#2e3035","surface-container-low":"#161719","on-secondary-container":"#bab8b2","on-background":"#e3e2e3","inverse-primary":"#ae3200","surface":"#0f1012","on-secondary-fixed":"#1b1c18","on-tertiary-fixed-variant":"#45474b","outline-variant":"#43302a","error":"#ffb4ab","on-primary":"#5e1700","surface-bright":"#313235","on-primary-fixed-variant":"#852400","primary-fixed":"#ffdbd0","tertiary-fixed":"#e2e2e7","primary":"#ffb59e","outline":"#8d7168","surface-container-lowest":"#08090a","on-primary-fixed":"#3a0b00","tertiary-fixed-dim":"#c6c6cb","on-tertiary-container":"#282a2e","inverse-on-surface":"#303032","tertiary":"#c6c6cb","secondary-fixed-dim":"#c8c6c0","on-primary-container":"#521300","secondary":"#c8c6c0","on-secondary-fixed-variant":"#474742","on-error":"#690005","surface-dim":"#0d0e10","inverse-surface":"#e3e2e3","on-tertiary-fixed":"#1a1c20","on-surface-variant":"#e6beb2","secondary-fixed":"#e4e2db","secondary-container":"#3d3e3a","tertiary-container":"#8f9095","surface-container":"#191a1d","background":"#08090a","primary-container":"#ff4d00","surface-variant":"#2b2c2f","on-secondary":"#30312c","surface-tint":"#ffb59e","on-error-container":"#ffdad6","surface-container-high":"#222326","surface-container-highest":"#2d2e32","error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-desktop":"3rem","space-lg":"2rem","space-2xl":"8rem","margin-desktop":"4rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"4rem","gutter":"1.5rem","margin":"1.5rem"},"fontFamily":{"headline-md-mobile":["Syne"],"body-sm":["Manrope"],"display-hero":["Syne"],"headline-md":["Syne"],"body-lead":["Manrope"],"display-hero-mobile":["Syne"],"headline-lg":["Syne"],"body-default":["Manrope"],"mono-index":["JetBrains Mono"],"headline-lg-mobile":["Syne"],"mono-telemetry":["JetBrains Mono"]},"fontSize":{"headline-md-mobile":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"display-hero":["96px",{"lineHeight":"96px","letterSpacing":"-0.04em","fontWeight":"800"}],"headline-md":["36px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lead":["20px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["44px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-default":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"mono-index":["13px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"500"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"mono-telemetry":["11px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-default text-body-default text-on-surface antialiased architectural-grid"><header class="fixed top-0 left-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-surface-container-high/60"><div class="h-20 w-full px-margin md:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="overview" href="#"><span class="font-mono-index text-mono-index uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors">MI / 2026</span><span class="font-mono-telemetry text-mono-telemetry uppercase text-outline hidden sm:inline-block">[SYS.ARCH]</span></a><div class="hidden xl:flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry text-secondary uppercase pl-space-md"><span class="w-2 h-2 bg-primary-container animate-pulse inline-block"></span><span class="tracking-widest">STATUS : FULL-STACK • FRONTEND • SWE INTERN / CONTRACT</span></div></div><nav class="hidden lg:flex items-center gap-space-lg font-mono-index text-mono-index uppercase" data-active-classes="text-primary border-b border-primary-container"><a aria-current="page" class="transition-colors py-space-xs text-primary border-b border-primary-container" href="#projects-index">01 // Selected Work</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#experience-track">02 // Experience &amp; PentaValue</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#engineering-pillars">03 // Engineering Core</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#transmit-hub">04 // Direct Dispatch</a></nav><div class="flex items-center gap-space-md font-mono-telemetry text-mono-telemetry uppercase"><div class="hidden sm:flex items-center gap-space-sm"><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">GH//850</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" href="https://linkedin.com/in/marwan-ibrahim" rel="noopener noreferrer" target="_blank">LI//PROFILE</a><button class="px-space-sm py-space-xs text-primary hover:text-on-surface transition-colors" onclick="copyEmail()">COPY GMAIL</button></div><div class="w-8 h-8 rounded-none bg-primary-container text-on-primary flex items-center justify-center font-mono-telemetry font-bold">MI</div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- LIVE STATUS TELEMETRY & CAIRO TIME TICKER -->
+<div class="w-full bg-surface-container-lowest py-space-xs px-margin md:px-margin-desktop flex flex-wrap items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry text-secondary uppercase border-b border-surface-container-high/60">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="w-2 h-2 bg-primary-container animate-ping inline-block"></span>
+        SYSTEM TELEMETRY // PRODUCTION LIVE
+      </span>
+<span class="hidden md:inline text-outline">|</span>
+<span class="hidden md:inline text-on-surface-variant font-mono-telemetry">MARWAN IBRAHIM — SOFTWARE &amp; FRONTEND ARCHITECTURE</span>
+</div>
+<div class="flex items-center gap-space-lg text-outline">
+<span class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span>CAIRO LOCUS [UTC+2]: </span>
+<span class="text-primary font-bold" id="cairo-clock">--:--:--</span>
+</span>
+<span class="hidden sm:inline text-secondary">RTT: <span class="text-primary-container" id="ping-telemetry">18ms</span></span>
+<span class="hidden lg:inline text-primary-container font-bold">INTERN @ PENTAVALUE (PENTAFLOW)</span>
+</div>
+</div>
+<!-- SECTION 01: ARCHITECTURAL MANIFESTO HERO -->
+<section class="w-full px-margin md:px-margin-desktop py-space-xl md:py-space-2xl bg-surface relative overflow-hidden border-b border-surface-container-high/60">
+<div class="absolute top-8 right-8 font-mono-telemetry text-mono-telemetry text-outline/40 uppercase hidden lg:block text-right">
+<span>COORDINATES: 30.0444° N // 31.2357° E</span><br/>
+<span>ENGINEERING SPEC: MI-2026-CHASSIS</span><br/>
+<span>CHASSIS REF: REACT • NEXT.JS • REDUX • PHP/MYSQL</span>
+</div>
+<div class="max-w-7xl mx-auto flex flex-col space-y-space-xl">
+<!-- Kinetic badge & context pin -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="bg-primary-container text-on-primary font-mono-index text-mono-index px-space-md py-space-xs font-bold uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px]">corporate_fare</span>
+          FULL STACK WEB DEVELOPER INTERN @ PENTAVALUE
+        </div>
+<div class="bg-surface-container-high text-on-surface font-mono-telemetry text-mono-telemetry px-space-md py-space-xs uppercase tracking-widest text-secondary flex items-center gap-space-xs">
+<span>[ LIVE SYSTEM: PENTAFLOW WORKFLOW ORCHESTRATOR ]</span>
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+</div>
+</div>
+<!-- Hero Typographic Monolith -->
+<div class="space-y-space-md max-w-6xl">
+<div class="font-mono-telemetry text-mono-telemetry uppercase tracking-widest text-primary flex items-center gap-space-xs">
+<span class="w-4 h-px bg-primary"></span>
+<span>TARGET: FULL-STACK DEVELOPER • FRONTEND ENGINEER • SOFTWARE INTERN / FREELANCE</span>
+</div>
+<h1 class="font-display-hero text-headline-lg md:text-display-hero uppercase tracking-tighter text-on-surface leading-none">
+          FULL-STACK &amp; FRONTEND<br/>
+          ENGINEER CRAFTING<br/>
+<span class="text-primary-container italic font-light tracking-tight">RESILIENT DIGITAL</span> SYSTEMS.
+        </h1>
+<p class="font-body-lead text-body-lead text-on-surface-variant max-w-3xl pt-space-sm font-light">
+          Engineering mission-critical enterprise workflows, atomic reactive frontends in Next.js &amp; React, Redux Toolkit state engines, and zero-defect REST APIs verified with Postman and GitLab CI.
+        </p>
+</div>
+<!-- Primary Action Gateway -->
+<div class="pt-space-md flex flex-wrap items-center gap-space-md">
+<a class="bg-on-surface text-surface font-mono-index text-mono-index uppercase px-space-lg py-space-md font-bold hover:bg-primary-container hover:text-on-primary transition-all duration-150 flex items-center gap-space-xs group" href="#projects-index">
+<span>[ 03 PRODUCTION PROJECTS ]</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="bg-surface-container-high text-on-surface font-mono-index text-mono-index uppercase px-space-lg py-space-md hover:bg-surface-container hover:text-primary transition-all duration-150 flex items-center gap-space-xs" href="#experience-track">
+<span>EXPERIENCE &amp; PENTAFLOW TRACK</span>
+</a>
+<div class="flex items-center gap-space-xs pl-0 md:pl-space-md">
+<a class="p-space-md bg-surface-container hover:bg-surface-container-highest text-on-surface hover:text-primary transition-colors font-mono-telemetry text-mono-telemetry flex items-center gap-space-xs" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank" title="GitHub Repository Index">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span class="hidden sm:inline">GH/marwanibrahim850</span>
+</a>
+<a class="p-space-md bg-surface-container hover:bg-surface-container-highest text-on-surface hover:text-primary transition-colors font-mono-telemetry text-mono-telemetry flex items-center gap-space-xs" href="https://linkedin.com/in/marwan-ibrahim" rel="noopener noreferrer" target="_blank" title="LinkedIn Professional Record">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span class="hidden sm:inline">LI/marwan-ibrahim</span>
+</a>
+<button class="p-space-md bg-surface-container hover:bg-primary-container hover:text-on-primary text-primary transition-colors font-mono-telemetry text-mono-telemetry flex items-center gap-space-xs" onclick="copyEmail()" title="Direct Gmail Dispatch (1-Click Copy)">
+<span class="material-symbols-outlined text-[18px]">alternate_email</span>
+<span class="hidden sm:inline">i.marwan2006@gmail.com</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-lg bg-surface-container-lowest p-space-lg border border-surface-container-high/60">
+<div class="space-y-space-xs">
+<div class="font-mono-telemetry text-mono-telemetry uppercase text-outline">[ PROFILE STRUCTURE ]</div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">1 FS + 2 FE</div>
+<div class="font-mono-telemetry text-mono-telemetry text-secondary">Full-Stack Core &amp; Deep Reactive Frontend</div>
+</div>
+<div class="space-y-space-xs">
+<div class="font-mono-telemetry text-mono-telemetry uppercase text-outline">[ CURRENT INDUSTRY RUN ]</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">PENTAVALUE</div>
+<div class="font-mono-telemetry text-mono-telemetry text-secondary">Full Stack Intern // Live PentaFlow System</div>
+</div>
+<div class="space-y-space-xs">
+<div class="font-mono-telemetry text-mono-telemetry uppercase text-outline">[ VERIFICATION PIPELINE ]</div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">ZERO-DEFECT</div>
+<div class="font-mono-telemetry text-mono-telemetry text-secondary">Postman Verified Suites • GitLab CI</div>
+</div>
+<div class="space-y-space-xs">
+<div class="font-mono-telemetry text-mono-telemetry uppercase text-outline">[ DIRECT PROTOCOL ]</div>
+<div class="font-headline-md text-headline-md text-primary-container font-bold">GMAIL / INBOX</div>
+<div class="font-mono-telemetry text-mono-telemetry text-on-surface">i.marwan2006@gmail.com</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: RESTRUCTURED 03 CURATED PRODUCTION PROJECTS -->
+<section class="w-full px-margin md:px-margin-desktop py-space-xl bg-surface-container-lowest" id="projects-index">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-surface-container-high pb-space-lg">
+<div class="space-y-space-xs">
+<div class="font-mono-telemetry text-mono-telemetry text-primary-container uppercase font-bold tracking-widest">[ 03 CURATED PRODUCTION PROJECTS • 1 FULL-STACK + 2 FRONTEND ]</div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-on-surface">
+          PRODUCTION SHOWCASE CATALOG
+        </h2>
+<p class="font-body-default text-body-default text-secondary max-w-2xl">
+          High-resolution engineering portfolios framed with custom visual inspection bezels, responsive architecture telemetry, verified GitHub repositories, and live demo access.
+        </p>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-outline text-right uppercase">
+<span>CATALOG REF: MI-CURATED-03</span><br/>
+<span class="text-primary">ALL ARTIFACTS VERIFIED</span>
+</div>
+</div>
+<!-- ================= PROJECT 01 (FULL-STACK) ================= -->
+<div class="bg-surface p-space-md md:p-space-lg border border-surface-container-high space-y-space-md">
+<!-- Technical Bezel Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry bg-surface-container-low px-space-md py-space-xs text-secondary uppercase border-l-2 border-primary-container">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-bold">PROJECT // 01</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface font-semibold">FULL-STACK E-COMMERCE &amp; RELATIONAL SYSTEMS PLATFORM</span>
+<span class="bg-primary-container text-on-primary px-1.5 py-0.5 text-[9px] font-bold">FULL-STACK [FE + BE]</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-secondary">MySQL 3NF + NEXT.JS 14</span>
+<span class="text-primary-container font-bold">STATUS: DEPLOYED</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Bespoke Placeholder Visual Mockup Container (7 Cols) -->
+<div class="lg:col-span-7 relative group bg-surface-container-low border border-surface-container-high flex flex-col justify-between overflow-hidden">
+<!-- Top Terminal Bar -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container border-b border-surface-container-high font-mono-telemetry text-mono-telemetry text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-error/80 inline-block"></span>
+<span class="w-2.5 h-2.5 bg-yellow-500/80 inline-block"></span>
+<span class="w-2.5 h-2.5 bg-green-500/80 inline-block"></span>
+<span class="ml-2 text-on-surface text-[10px]">PREVIEW // RELATIONAL-COMMERCE-ENGINE-v14.app</span>
+</div>
+<span class="text-[10px] text-primary">16:10 ARCHIVAL FRAME</span>
+</div>
+<!-- Interactive Mockup Canvas Area -->
+<div class="relative w-full aspect-[16/10] bg-surface-container-lowest flex flex-col items-center justify-center p-space-md text-center overflow-hidden">
+<!-- Grid pattern watermark -->
+<div class="absolute inset-0 architectural-grid opacity-60 pointer-events-none"></div>
+<!-- Live Mockup Graphic Container -->
+<div class="relative z-10 w-11/12 border border-surface-container-high bg-surface p-space-md space-y-space-sm shadow-2xl">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-xs font-mono-telemetry text-[10px] text-outline">
+<span class="text-on-surface font-bold">SSR DATA PIPELINE // SERVER ACTIONS</span>
+<span class="text-primary">200 OK • 12ms</span>
+</div>
+<!-- Mini schematic UI simulation -->
+<div class="grid grid-cols-3 gap-space-xs text-left">
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">CLIENT SLICE</div>
+<div class="text-on-surface font-bold">Cart Optimistic</div>
+<div class="text-primary-container">0.00 CLS</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">MIDDLEWARE</div>
+<div class="text-on-surface font-bold">JWT + CSRF</div>
+<div class="text-secondary">Secured Gate</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">RELATIONAL DB</div>
+<div class="text-on-surface font-bold">MySQL 3NF</div>
+<div class="text-primary">Indexed Queries</div>
+</div>
+</div>
+<!-- Dynamic Mockup Notice -->
+<div class="pt-space-xs flex items-center justify-center gap-space-xs font-mono-telemetry text-mono-telemetry text-primary">
+<span class="material-symbols-outlined text-[15px]">image</span>
+<span class="uppercase tracking-wider font-bold">READY FOR YOUR PROJECT SCREENSHOT / MOCKUP</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-4 font-mono-telemetry text-[10px] text-outline uppercase flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-container inline-block"></span>
+<span>ASPECT 16:10 • TAILWIND + NEXT.JS CLIENT HYDRATION</span>
+</div>
+</div>
+</div>
+<!-- Technical Dossier Rail (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-md border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry text-outline uppercase">
+<span>DISCIPLINE: FULL-STACK</span>
+<span class="text-primary">PHP / MYSQL + REACT</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">
+              Relational Commerce &amp; Data Engine
+            </h3>
+<p class="font-body-default text-body-default text-on-surface-variant font-light leading-relaxed">
+              Full-stack relational transactional platform combining Server-Side Rendering (SSR) hydration with a normalized 3NF MySQL backend. Built with robust REST microservice endpoints, optimistic client-side mutations for dynamic carts, and zero layout shift.
+            </p>
+<div class="space-y-space-xs font-mono-telemetry text-mono-telemetry">
+<div class="text-outline uppercase">[ ARCHITECTURAL PILLARS ]</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Next.js 14 App Router, Server Actions &amp; React SSR</span>
+</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Strict MySQL relational persistence preventing inventory drift</span>
+</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Postman automated contract test suites for all REST endpoints</span>
+</div>
+</div>
+</div>
+<!-- Technology Badges & Action Buttons -->
+<div class="space-y-space-sm pt-space-xs border-t border-surface-container-high">
+<div class="flex flex-wrap gap-space-xs font-mono-telemetry text-mono-telemetry uppercase">
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Next.js 14</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">React</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">PHP Core</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">MySQL</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Postman</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="px-space-md py-space-xs bg-on-surface text-surface hover:bg-primary-container hover:text-on-primary font-mono-telemetry text-mono-telemetry uppercase font-bold flex items-center gap-space-xs transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>CODE REPO</span>
+</a>
+<a class="px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-mono-telemetry text-mono-telemetry uppercase flex items-center gap-space-xs transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span>LIVE PREVIEW</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= PROJECT 02 (FRONTEND) ================= -->
+<div class="bg-surface p-space-md md:p-space-lg border border-surface-container-high space-y-space-md">
+<!-- Technical Bezel Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry bg-surface-container-low px-space-md py-space-xs text-secondary uppercase border-l-2 border-primary">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-bold">PROJECT // 02</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface font-semibold">INTERACTIVE ENTERPRISE OPERATIONS DASHBOARD</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 text-[9px] font-bold">FRONTEND ENGINEERING</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-secondary">REACT.JS + REDUX TOOLKIT</span>
+<span class="text-on-surface font-bold">STATUS: PRODUCTION-GRADE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Bespoke Placeholder Visual Mockup Container (7 Cols) -->
+<div class="lg:col-span-7 relative group bg-surface-container-low border border-surface-container-high flex flex-col justify-between overflow-hidden">
+<!-- Top Terminal Bar -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container border-b border-surface-container-high font-mono-telemetry text-mono-telemetry text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-error/80 inline-block"></span>
+<span class="w-2.5 h-2.5 bg-yellow-500/80 inline-block"></span>
+<span class="w-2.5 h-2.5 bg-green-500/80 inline-block"></span>
+<span class="ml-2 text-on-surface text-[10px]">OPS-TELEMETRY // REACT-REDUX-STATE.client</span>
+</div>
+<span class="text-[10px] text-primary">16:10 ARCHIVAL FRAME</span>
+</div>
+<!-- Interactive Mockup Canvas Area -->
+<div class="relative w-full aspect-[16/10] bg-surface-container-lowest flex flex-col items-center justify-center p-space-md text-center overflow-hidden">
+<div class="absolute inset-0 architectural-grid opacity-60 pointer-events-none"></div>
+<!-- Live Mockup Graphic Container -->
+<div class="relative z-10 w-11/12 border border-surface-container-high bg-surface p-space-md space-y-space-sm shadow-2xl">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-xs font-mono-telemetry text-[10px] text-outline">
+<span class="text-on-surface font-bold">RTK FINITE-STATE MACHINE // 60 FPS</span>
+<span class="text-primary-container">ZERO UI RE-RENDER JANK</span>
+</div>
+<!-- Mini schematic UI simulation -->
+<div class="grid grid-cols-4 gap-space-xs text-left">
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">SELECTORS</div>
+<div class="text-on-surface font-bold">Memoized</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">TABLE ROWS</div>
+<div class="text-on-surface font-bold">Virtualized</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">COMPONENTS</div>
+<div class="text-on-surface font-bold">Atomic UI</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">THEME</div>
+<div class="text-on-surface font-bold">Tailwind</div>
+</div>
+</div>
+<!-- Dynamic Mockup Notice -->
+<div class="pt-space-xs flex items-center justify-center gap-space-xs font-mono-telemetry text-mono-telemetry text-primary">
+<span class="material-symbols-outlined text-[15px]">dashboard_customize</span>
+<span class="uppercase tracking-wider font-bold">READY FOR YOUR PROJECT SCREENSHOT / MOCKUP</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-4 font-mono-telemetry text-[10px] text-outline uppercase flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary inline-block"></span>
+<span>ASPECT 16:10 • REACT 18 + REDUX TOOLKIT DATA HARNESS</span>
+</div>
+</div>
+</div>
+<!-- Technical Dossier Rail (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-md border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry text-outline uppercase">
+<span>DISCIPLINE: FRONTEND</span>
+<span class="text-primary">STATE MACHINES &amp; UI</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">
+              Interactive Enterprise Operations Cockpit
+            </h3>
+<p class="font-body-default text-body-default text-on-surface-variant font-light leading-relaxed">
+              Complex frontend operations cockpit engineered for high-cadence reactive workflows. Integrates normalized Redux Toolkit slices, dynamic multi-tier filtering, virtualized data tables, and atomic responsive design systems.
+            </p>
+<div class="space-y-space-xs font-mono-telemetry text-mono-telemetry">
+<div class="text-outline uppercase">[ ARCHITECTURAL PILLARS ]</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Finite-state Redux Toolkit architecture eradicating race conditions</span>
+</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Virtualized dataset rendering maintaining fluid 60 FPS transitions</span>
+</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Modular design tokens with Tailwind CSS &amp; clean accessibility</span>
+</div>
+</div>
+</div>
+<!-- Technology Badges & Action Buttons -->
+<div class="space-y-space-sm pt-space-xs border-t border-surface-container-high">
+<div class="flex flex-wrap gap-space-xs font-mono-telemetry text-mono-telemetry uppercase">
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">React.js</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Redux Toolkit</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Tailwind CSS</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Reselect</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">REST API</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="px-space-md py-space-xs bg-on-surface text-surface hover:bg-primary-container hover:text-on-primary font-mono-telemetry text-mono-telemetry uppercase font-bold flex items-center gap-space-xs transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>CODE REPO</span>
+</a>
+<a class="px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-mono-telemetry text-mono-telemetry uppercase flex items-center gap-space-xs transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span>LIVE PREVIEW</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= PROJECT 03 (FRONTEND) ================= -->
+<div class="bg-surface p-space-md md:p-space-lg border border-surface-container-high space-y-space-md">
+<!-- Technical Bezel Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry bg-surface-container-low px-space-md py-space-xs text-secondary uppercase border-l-2 border-secondary">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-bold">PROJECT // 03</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface font-semibold">MODERN RESPONSIVE WEB APPLICATION &amp; PORTFOLIO SERIES</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 text-[9px] font-bold">FRONTEND ARCHITECTURE</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-secondary">LIGHTHOUSE 100/100</span>
+<span class="text-primary font-bold">STATUS: PRODUCTION-PERFECT</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Bespoke Placeholder Visual Mockup Container (7 Cols) -->
+<div class="lg:col-span-7 relative group bg-surface-container-low border border-surface-container-high flex flex-col justify-between overflow-hidden">
+<!-- Top Terminal Bar -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container border-b border-surface-container-high font-mono-telemetry text-mono-telemetry text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-error/80 inline-block"></span>
+<span class="w-2.5 h-2.5 bg-yellow-500/80 inline-block"></span>
+<span class="w-2.5 h-2.5 bg-green-500/80 inline-block"></span>
+<span class="ml-2 text-on-surface text-[10px]">CLIENT-CORE // MODERN-WEB-APP-SERIES.interface</span>
+</div>
+<span class="text-[10px] text-primary">16:10 ARCHIVAL FRAME</span>
+</div>
+<!-- Interactive Mockup Canvas Area -->
+<div class="relative w-full aspect-[16/10] bg-surface-container-lowest flex flex-col items-center justify-center p-space-md text-center overflow-hidden">
+<div class="absolute inset-0 architectural-grid opacity-60 pointer-events-none"></div>
+<!-- Live Mockup Graphic Container -->
+<div class="relative z-10 w-11/12 border border-surface-container-high bg-surface p-space-md space-y-space-sm shadow-2xl">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-xs font-mono-telemetry text-[10px] text-outline">
+<span class="text-on-surface font-bold">ZERO-DRIFT LAYOUT // LIGHTHOUSE 100</span>
+<span class="text-primary">SUB-10MS FID</span>
+</div>
+<!-- Mini schematic UI simulation -->
+<div class="grid grid-cols-4 gap-space-xs text-left">
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">PERFORMANCE</div>
+<div class="text-primary-container font-bold">100 / 100</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">ACCESSIBILITY</div>
+<div class="text-on-surface font-bold">100 / 100</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">BEST PRACTICE</div>
+<div class="text-on-surface font-bold">100 / 100</div>
+</div>
+<div class="bg-surface-container-low p-space-xs font-mono-telemetry text-[9px]">
+<div class="text-outline">SEO METRICS</div>
+<div class="text-on-surface font-bold">100 / 100</div>
+</div>
+</div>
+<!-- Dynamic Mockup Notice -->
+<div class="pt-space-xs flex items-center justify-center gap-space-xs font-mono-telemetry text-mono-telemetry text-primary">
+<span class="material-symbols-outlined text-[15px]">laptop_mac</span>
+<span class="uppercase tracking-wider font-bold">READY FOR YOUR PROJECT SCREENSHOT / MOCKUP</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-4 font-mono-telemetry text-[10px] text-outline uppercase flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-secondary inline-block"></span>
+<span>ASPECT 16:10 • NEXT.JS / REACT + SEMANTIC TAILWIND ARCHITECTURE</span>
+</div>
+</div>
+</div>
+<!-- Technical Dossier Rail (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-md border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry text-outline uppercase">
+<span>DISCIPLINE: FRONTEND</span>
+<span class="text-primary">RESPONSIVE &amp; DESIGN SYSTEMS</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">
+              Modern Responsive Web App Series
+            </h3>
+<p class="font-body-default text-body-default text-on-surface-variant font-light leading-relaxed">
+              Precision client frontend engineering focusing on hyper-fast load timings, strict semantic accessibility, fluid CSS typography scales, and zero cumulative layout shift across desktop, tablet, and mobile breakpoints.
+            </p>
+<div class="space-y-space-xs font-mono-telemetry text-mono-telemetry">
+<div class="text-outline uppercase">[ ARCHITECTURAL PILLARS ]</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>100/100 Lighthouse performance metrics with zero render-blocking CSS</span>
+</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Next.js modern asset optimization &amp; responsive atomic UI tokens</span>
+</div>
+<div class="text-on-surface flex items-start gap-space-xs">
+<span class="text-primary-container">•</span>
+<span>Bespoke micro-interactions with hardware-accelerated transforms</span>
+</div>
+</div>
+</div>
+<!-- Technology Badges & Action Buttons -->
+<div class="space-y-space-sm pt-space-xs border-t border-surface-container-high">
+<div class="flex flex-wrap gap-space-xs font-mono-telemetry text-mono-telemetry uppercase">
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">React</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Next.js</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">Tailwind CSS</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">TypeScript</span>
+<span class="bg-surface-container-highest px-space-sm py-0.5 text-on-surface">GitLab CI</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="px-space-md py-space-xs bg-on-surface text-surface hover:bg-primary-container hover:text-on-primary font-mono-telemetry text-mono-telemetry uppercase font-bold flex items-center gap-space-xs transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>CODE REPO</span>
+</a>
+<a class="px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-mono-telemetry text-mono-telemetry uppercase flex items-center gap-space-xs transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">open_in_new</span>
+<span>LIVE PREVIEW</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: EXPERIENCE & ENGINEERING TRACK LEDGER (INTEGRATING PENTAVALUE & PENTAFLOW) -->
+<section class="w-full px-margin md:px-margin-desktop py-space-xl bg-surface border-y border-surface-container-high/60" id="experience-track">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-surface-container-high pb-space-lg">
+<div class="space-y-space-xs">
+<span class="font-mono-telemetry text-mono-telemetry text-primary-container uppercase font-bold tracking-widest">[ CHRONOLOGY &amp; LIVE PRODUCTION LEDGER ]</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-on-surface">
+          WORK EXPERIENCE &amp; ENGINEERING TRACK
+        </h2>
+<p class="font-body-default text-body-default text-secondary max-w-2xl">
+          Real-world industry track combining fast-paced enterprise application engineering at PentaValue with verified software engineering practices.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs border border-surface-container-high">
+<span class="w-2.5 h-2.5 bg-primary-container rounded-none animate-ping"></span>
+<span class="font-mono-telemetry text-mono-telemetry text-on-surface uppercase tracking-wider">ACTIVE IN SPRINT // CAIRO</span>
+</div>
+</div>
+<!-- Compact Experience Ledger -->
+<div class="space-y-space-lg">
+<!-- Primary Experience Entry: PentaValue & PentaFlow -->
+<div class="bg-surface-container-lowest border border-surface-container-high p-space-md md:p-space-lg space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm border-b border-surface-container-high pb-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry uppercase text-primary-container font-bold">
+<span class="material-symbols-outlined text-[16px]">corporate_fare</span>
+<span>PENTAVALUE // ENTERPRISE SOFTWARE DIVISION</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">
+              Full Stack Web Developer Intern
+            </h3>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-right text-secondary uppercase space-y-0.5">
+<div class="bg-surface-container px-space-sm py-0.5 text-primary font-bold">CURRENT ROLE // ACTIVE SPRINT</div>
+<div class="text-outline">SYSTEM: PENTAFLOW (LIVE IN-PRODUCTION)</div>
+</div>
+</div>
+<!-- Engineering Deep Dive on PentaFlow within the role -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg pt-space-xs">
+<div class="lg:col-span-8 space-y-space-sm">
+<div class="font-mono-telemetry text-mono-telemetry uppercase text-outline">[ PRODUCTION SYSTEM CONTRIBUTIONS : PENTAFLOW ]</div>
+<p class="font-body-default text-body-default text-on-surface-variant font-light leading-relaxed">
+              Spearheading key frontend and data-pipeline modules for <strong>PentaFlow</strong>, PentaValue's internal dynamic workflow orchestrator. Engineered reactive finite-state engines via Redux Toolkit to prevent race conditions during rapid asynchronous node branch executions.
+            </p>
+<ul class="space-y-space-xs font-mono-telemetry text-mono-telemetry text-secondary">
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-bold">▸</span>
+<span><strong class="text-on-surface">Dynamic Data Pipelines:</strong> Built procedural JSON-schema form renderers handling multi-tiered validations without costly DOM repaints.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-bold">▸</span>
+<span><strong class="text-on-surface">Reactive State Machines:</strong> Structured normalized Redux Toolkit slices with memoized selectors for seamless state rehydration.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-bold">▸</span>
+<span><strong class="text-on-surface">Next.js &amp; REST Integrations:</strong> Optimized client-to-server contracts and dynamic Server Actions.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-bold">▸</span>
+<span><strong class="text-on-surface">API Verification &amp; CI:</strong> Enforced zero regression escape with automated Postman schema assertions integrated into GitLab CI pipelines.</span>
+</li>
+</ul>
+</div>
+<!-- Compact Telemetry & Stack Badge Rail -->
+<div class="lg:col-span-4 bg-surface-container p-space-md border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs font-mono-telemetry text-mono-telemetry">
+<div class="text-outline uppercase">[ VERIFIED ARTIFACT HARNESS ]</div>
+<div class="text-on-surface font-semibold flex items-center justify-between">
+<span>AUTOMATION GATES</span>
+<span class="text-primary">100% POSTMAN</span>
+</div>
+<div class="text-on-surface font-semibold flex items-center justify-between">
+<span>CI RUNNER</span>
+<span class="text-primary">GITLAB CI/CD</span>
+</div>
+<div class="text-on-surface font-semibold flex items-center justify-between">
+<span>STATE MODEL</span>
+<span class="text-primary">REDUX TOOLKIT</span>
+</div>
+</div>
+<div class="pt-space-xs flex flex-wrap gap-1 font-mono-telemetry text-[10px] uppercase">
+<span class="bg-surface-container-high px-1.5 py-0.5 text-on-surface">Next.js</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 text-on-surface">React 18</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 text-on-surface">Redux Toolkit</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 text-on-surface">Postman</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 text-on-surface">GitLab CI</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Entry: Independent Full-Stack & Contract Engineering -->
+<div class="bg-surface-container-lowest border border-surface-container-high p-space-md md:p-space-lg space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm border-b border-surface-container-high pb-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs font-mono-telemetry text-mono-telemetry uppercase text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>INDEPENDENT ENGINEERING &amp; CLIENT SYSTEMS</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">
+              Full-Stack &amp; Frontend Systems Developer
+            </h3>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-right text-secondary uppercase space-y-0.5">
+<div class="bg-surface-container px-space-sm py-0.5 text-on-surface">FREELANCE / CONTRACT</div>
+<div class="text-outline">CLIENT SPECIFICATIONS &amp; APPS</div>
+</div>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant font-light leading-relaxed">
+          Architected end-to-end full-stack architectures combining custom PHP &amp; MySQL databases with modular React and Next.js frontends. Implemented zero-cumulative-layout-shift UI systems, custom JWT token sessions, and sub-15ms relational query indexing.
+        </p>
+</div>
+</div>
+<!-- Bespoke Interactive Engineering Snippet Switcher -->
+<div class="bg-surface-container-lowest border border-surface-container-high p-space-md space-y-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry border-b border-surface-container-high pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary-container font-bold">[ INTERACTIVE CODE TELEMETRY ]</span>
+<span class="text-outline">MARWAN'S INVARIANT ENGINE</span>
+</div>
+<!-- Switcher tabs -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-0.5 bg-primary-container text-on-primary font-bold text-[10px]" id="tab-btn-rtk" onclick="switchSnippet('rtk')">REDUX TOOLKIT SLICE</button>
+<button class="px-space-sm py-0.5 bg-surface-container text-secondary hover:text-on-surface text-[10px]" id="tab-btn-ci" onclick="switchSnippet('ci')">GITLAB CI PIPELINE</button>
+<button class="px-space-sm py-0.5 bg-surface-container text-secondary hover:text-on-surface text-[10px]" id="tab-btn-db" onclick="switchSnippet('db')">MYSQL 3NF SCHEMA</button>
+</div>
+</div>
+<!-- Code Display Pane -->
+<div class="p-space-sm bg-surface-container-low font-mono-telemetry text-[11px] text-on-surface leading-relaxed overflow-x-auto">
+<pre class="text-secondary" id="code-snippet-pane"><span class="text-primary">// PentaFlow State Slice (Redux Toolkit finite-state pattern)</span>
+export const pentaFlowSlice = createSlice({
+  name: 'pentaFlow/engine',
+  initialState: { status: 'idle', activeNodeId: null, mutations: {} },
+  reducers: {
+    commitNodeMutation: (state, action) =&gt; {
+      state.mutations[action.payload.id] = action.payload.data;
+      state.status = 'syncing_postman_contract';
+    }
+  }
+});</pre>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: TECHNICAL ARCHITECTURE & DISCIPLINE (3 RIGOROUS PILLARS) -->
+<section class="w-full px-margin md:px-margin-desktop py-space-xl bg-surface-container-lowest" id="engineering-pillars">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<div class="space-y-space-xs border-b border-surface-container-high pb-space-lg">
+<span class="font-mono-telemetry text-mono-telemetry text-primary-container uppercase font-bold tracking-widest">[ SYSTEM FOUNDATION &amp; DISCIPLINE ]</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-on-surface">
+          THREE CORE TECHNICAL PILLARS
+        </h2>
+<p class="font-body-default text-body-default text-secondary max-w-3xl">
+          Marwan Ibrahim's software engineering practice is forged across strict frontend reactivity, relational persistence, and verified deployment safety.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Pillar 01: Reactive Client -->
+<div class="bg-surface p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-lg">
+<div class="space-y-space-md">
+<div class="font-mono-telemetry text-mono-telemetry text-primary font-bold">[ PILLAR 01 // FRONTEND ]</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Reactive Client Architecture</h3>
+<p class="font-body-default text-body-default text-on-surface-variant font-light">
+              Crafting modular, composable, and resilient component hierarchies in React and Next.js. Heavy emphasis on unyielding state mechanics:
+            </p>
+<ul class="space-y-space-xs font-mono-telemetry text-mono-telemetry text-secondary">
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Next.js 14 App Router &amp; SSR Hydration</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Redux Toolkit (RTK) Slice Engineering</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Atomic Component Tokenization</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Zero Cumulative Layout Shift (CLS)</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Complex Form Orchestration &amp; Validation</li>
+</ul>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-outline pt-space-md border-t border-surface-container-high">
+            ECOSYSTEM: REACT • NEXT.JS • REDUX • TS/JS
+          </div>
+</div>
+<!-- Pillar 02: Relational & Backend -->
+<div class="bg-surface p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-lg">
+<div class="space-y-space-md">
+<div class="font-mono-telemetry text-mono-telemetry text-primary font-bold">[ PILLAR 02 // BACKEND ]</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">Relational Data &amp; REST APIs</h3>
+<p class="font-body-default text-body-default text-on-surface-variant font-light">
+              Designing scalable relational persistence schemas and low-latency REST endpoints verified against production edge cases:
+            </p>
+<ul class="space-y-space-xs font-mono-telemetry text-mono-telemetry text-secondary">
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> MySQL 3NF Database Normalization</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> PHP REST Microservice Handlers</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Query Indexing &amp; Latency Tuning</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Idempotent HTTP Methods &amp; Error Contracts</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Stateless Authentication &amp; JWT Verification</li>
+</ul>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-outline pt-space-md border-t border-surface-container-high">
+            ECOSYSTEM: PHP • MYSQL • REST • RELATIONAL
+          </div>
+</div>
+<!-- Pillar 03: Engineering Rigor & CI -->
+<div class="bg-surface p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-lg">
+<div class="space-y-space-md">
+<div class="font-mono-telemetry text-mono-telemetry text-primary font-bold">[ PILLAR 03 // RELIABILITY ]</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface">CI/CD &amp; Testing Rigor</h3>
+<p class="font-body-default text-body-default text-on-surface-variant font-light">
+              Guaranteed operational stability through automated verification harnesses, preventing regression escapes to production:
+            </p>
+<ul class="space-y-space-xs font-mono-telemetry text-mono-telemetry text-secondary">
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Postman Automated Contract Tests</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> GitLab CI/CD Pipeline Automation</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Strict Git Feature-Branching Strategy</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Automated Build Artifact Verification</li>
+<li class="flex items-center gap-space-xs"><span class="text-primary-container">•</span> Defect-Free API Ingress Verification</li>
+</ul>
+</div>
+<div class="font-mono-telemetry text-mono-telemetry text-outline pt-space-md border-t border-surface-container-high">
+            ECOSYSTEM: GITLAB CI • POSTMAN • GIT • LINUX
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: DIRECT DISPATCH / RECRUITER TRANSMIT HUB (NO PHONE NUMBER - STRICT PRIVACY) -->
+<section class="w-full px-margin md:px-margin-desktop py-space-xl md:py-space-2xl bg-surface relative" id="transmit-hub">
+<div class="max-w-7xl mx-auto space-y-space-xl">
+<!-- Monolithic Architectural Invitation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left: Statement & Direct Actions (7 Cols) -->
+<div class="lg:col-span-7 space-y-space-lg">
+<div class="space-y-space-xs">
+<div class="font-mono-telemetry text-mono-telemetry text-primary-container font-bold uppercase tracking-widest">[ DIRECT COMM PROTOCOL • VERIFIED RECEPTORS ]</div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-on-surface">
+              TRANSMIT AN ENGAGEMENT OR INQUIRY
+            </h2>
+<p class="font-body-lead text-body-lead text-on-surface-variant font-light pt-space-xs">
+              Available for Full-Stack Developer, Frontend Engineer, SWE Internship, and Mission-Critical Freelance roles. Every transmission is answered directly by Marwan Ibrahim.
+            </p>
+</div>
+<!-- Channel 01: Gmail Direct Click & Copy -->
+<div class="p-space-lg bg-surface-container-low border border-surface-container-high space-y-space-md">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry text-outline uppercase">
+<span>PRIMARY SECURE DISPATCH</span>
+<span class="text-primary-container font-bold">1-CLICK COPY / LAUNCH</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-mono-telemetry text-mono-telemetry text-secondary uppercase">DIRECT GMAIL ADDRESS:</span>
+<div class="font-mono-index text-headline-md-mobile text-primary font-bold select-all" id="email-text">
+                  i.marwan2006@gmail.com
+                </div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-mono-telemetry text-mono-telemetry uppercase flex items-center gap-space-xs transition-colors" id="copy-btn" onclick="copyEmail()">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copy-btn-text">COPY EMAIL</span>
+</button>
+<a class="px-space-md py-space-sm bg-primary-container text-on-primary font-mono-telemetry text-mono-telemetry uppercase font-bold flex items-center gap-space-xs hover:bg-primary transition-colors" href="mailto:i.marwan2006@gmail.com?subject=Software%20Engineering%20Inquiry%20%E2%80%94%20Marwan%20Ibrahim">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>OPEN DRAFT</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Secondary Links: LinkedIn & GitHub -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<a class="p-space-md bg-surface-container hover:bg-surface-container-high border border-surface-container-high transition-colors flex flex-col justify-between space-y-space-md group" href="https://linkedin.com/in/marwan-ibrahim" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center justify-between text-outline font-mono-telemetry text-mono-telemetry">
+<span>[ CHANNEL 02: PROFESSIONAL ]</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+<div>
+<div class="font-mono-index text-mono-index text-on-surface font-bold">LINKEDIN RECORD</div>
+<div class="font-mono-telemetry text-mono-telemetry text-secondary">linkedin.com/in/marwan-ibrahim</div>
+</div>
+</a>
+<a class="p-space-md bg-surface-container hover:bg-surface-container-high border border-surface-container-high transition-colors flex flex-col justify-between space-y-space-md group" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center justify-between text-outline font-mono-telemetry text-mono-telemetry">
+<span>[ CHANNEL 03: CODE VAULT ]</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</div>
+<div>
+<div class="font-mono-index text-mono-index text-on-surface font-bold">GITHUB REPOSITORIES</div>
+<div class="font-mono-telemetry text-mono-telemetry text-secondary">github.com/marwanibrahim850</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Right: Interactive Recruiter Prompt Dialog (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-lg">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between font-mono-telemetry text-mono-telemetry text-outline uppercase">
+<span>DISPATCH CONSOLE</span>
+<span class="text-primary-container font-bold">MARWAN IBRAHIM INBOX</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-mono-telemetry text-mono-telemetry text-secondary uppercase">ENGAGEMENT TARGET</span>
+<div class="grid grid-cols-2 gap-space-xs font-mono-telemetry text-mono-telemetry text-on-surface">
+<label class="flex items-center gap-space-xs p-space-xs bg-surface-container-lowest cursor-pointer border border-surface-container-high">
+<input checked="" class="accent-primary-container" name="role_type" type="radio"/>
+<span>FULL-STACK</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-xs bg-surface-container-lowest cursor-pointer border border-surface-container-high">
+<input class="accent-primary-container" name="role_type" type="radio"/>
+<span>FRONTEND ENG</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-xs bg-surface-container-lowest cursor-pointer border border-surface-container-high">
+<input class="accent-primary-container" name="role_type" type="radio"/>
+<span>SWE INTERNSHIP</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-xs bg-surface-container-lowest cursor-pointer border border-surface-container-high">
+<input class="accent-primary-container" name="role_type" type="radio"/>
+<span>FREELANCE / LAB</span>
+</label>
+</div>
+</div>
+<div class="space-y-space-xs">
+<span class="font-mono-telemetry text-mono-telemetry text-secondary uppercase">COMPOSE QUICK INQUIRY MEMO</span>
+<textarea class="w-full bg-surface-container-lowest text-on-surface p-space-sm font-mono-telemetry text-mono-telemetry placeholder:text-outline border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary-container resize-none" id="inquiry-memo" placeholder="Marwan, we are reviewing your work at PentaValue and portfolio projects, and would like to connect..." rows="4"></textarea>
+</div>
+</div>
+<button class="w-full bg-on-surface text-surface hover:bg-primary-container hover:text-on-primary font-mono-index text-mono-index uppercase py-space-md font-bold transition-all duration-150 flex items-center justify-center gap-space-xs" onclick="dispatchInquiryMemo()">
+<span>TRANSMIT DIRECT VIA GMAIL CLIENT</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+<!-- Compliance & Strict Channel Guarantee (NO PHONE) -->
+<div class="p-space-md bg-surface-container-lowest border border-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry text-outline uppercase">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 bg-primary inline-block"></span>
+<span>STRICT PRIVACY POLICY: NO TELEPHONE CARRIER ACCESS • DIRECT CHANNELS EXCLUSIVELY</span>
+</div>
+<div class="text-secondary">
+          CAIRO, EGYPT // REMOTE WORLDWIDE ENGAGEMENT
+        </div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Real-time Cairo Time (UTC+2) Clock
+  function updateCairoClock() {
+    const clockEl = document.getElementById('cairo-clock');
+    if (!clockEl) return;
+    const now = new Date();
+    // UTC + 2
+    const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const cairoTime = new Date(utcTime + (3600000 * 2));
+    const hours = String(cairoTime.getHours()).padStart(2, '0');
+    const minutes = String(cairoTime.getMinutes()).padStart(2, '0');
+    const seconds = String(cairoTime.getSeconds()).padStart(2, '0');
+    clockEl.innerText = `${hours}:${minutes}:${seconds}`;
+  }
+  setInterval(updateCairoClock, 1000);
+  updateCairoClock();
+
+  // Subtle ping jitter simulation
+  setInterval(() => {
+    const pingEl = document.getElementById('ping-telemetry');
+    if (pingEl) {
+      const ping = Math.floor(Math.random() * 8) + 14;
+      pingEl.innerText = `${ping}ms`;
+    }
+  }, 4000);
+
+  // Interactive Code Snippet Switcher
+  const snippets = {
+    rtk: `<span class="text-primary">// PentaFlow State Slice (Redux Toolkit finite-state pattern)</span>
+export const pentaFlowSlice = createSlice({
+  name: 'pentaFlow/engine',
+  initialState: { status: 'idle', activeNodeId: null, mutations: {} },
+  reducers: {
+    commitNodeMutation: (state, action) => {
+      state.mutations[action.payload.id] = action.payload.data;
+      state.status = 'syncing_postman_contract';
+    }
+  }
+});`,
+    ci: `<span class="text-primary"># GitLab CI/CD Automated Verification Gates</span>
+stages:
+  - test_contracts
+  - build_artifact
+
+postman_schema_gate:
+  stage: test_contracts
+  script:
+    - newman run collections/pentaflow_contracts.json --bail
+    - echo "ZERO ESCAPE VERIFIED"`,
+    db: `<span class="text-primary">-- MySQL 3NF Relational Persistence Schema</span>
+CREATE TABLE users_tenants (
+  tenant_id CHAR(36) NOT NULL PRIMARY KEY,
+  schema_plan VARCHAR(32) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_tenant_status (tenant_id, schema_plan)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;`
+  };
+
+  function switchSnippet(type) {
+    const pane = document.getElementById('code-snippet-pane');
+    if (pane && snippets[type]) {
+      pane.innerHTML = snippets[type];
+    }
+    // Update active styles
+    ['rtk', 'ci', 'db'].forEach(t => {
+      const btn = document.getElementById(`tab-btn-${t}`);
+      if (btn) {
+        if (t === type) {
+          btn.className = "px-space-sm py-0.5 bg-primary-container text-on-primary font-bold text-[10px]";
+        } else {
+          btn.className = "px-space-sm py-0.5 bg-surface-container text-secondary hover:text-on-surface text-[10px]";
+        }
+      }
+    });
+  }
+
+  // Gmail copy handler
+  function copyEmail() {
+    const email = 'i.marwan2006@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+      const btnText = document.getElementById('copy-btn-text');
+      if (btnText) {
+        btnText.innerText = 'COPIED TO CLIPBOARD!';
+        setTimeout(() => {
+          btnText.innerText = 'COPY EMAIL';
+        }, 2500);
+      }
+    });
+  }
+
+  function dispatchInquiryMemo() {
+    const memo = document.getElementById('inquiry-memo');
+    const selectedRadio = document.querySelector('input[name="role_type"]:checked');
+    const role = selectedRadio ? selectedRadio.nextElementSibling.innerText : 'SOFTWARE ENGINEERING';
+    const text = memo && memo.value ? encodeURIComponent(memo.value) : encodeURIComponent('Hello Marwan, I reviewed your work at PentaValue and portfolio projects, and would like to connect regarding an engineering role.');
+    const subject = encodeURIComponent(`Engineering Inquiry: ${role} — Recruiter Dispatch`);
+    window.location.href = `mailto:i.marwan2006@gmail.com?subject=${subject}&body=${text}`;
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xl border-t border-surface-container-high/60"><div class="w-full px-margin md:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop mb-space-xl"><div class="md:span-5 flex flex-col justify-between"><div class="space-y-space-sm"><div class="font-mono-index text-mono-index uppercase tracking-wider text-on-surface">MARWAN IBRAHIM // CHASSIS 2026</div><p class="font-mono-telemetry text-mono-telemetry text-on-surface-variant uppercase max-w-sm">Full-Stack &amp; Frontend Systems Engineering • PentaValue Intern • High-throughput reactive solutions.</p></div><div class="pt-space-md font-mono-telemetry text-mono-telemetry text-secondary uppercase flex items-center gap-space-xs"><span class="w-2 h-2 bg-primary-container inline-block"></span>CORE PROTOCOL : ACTIVE OPERATIONAL</div></div><div class="md:span-4 flex flex-col space-y-space-xs font-mono-telemetry text-mono-telemetry uppercase"><span class="text-outline mb-space-xs">[ DIRECT DISPATCH &amp; REPOSITORIES ]</span><a class="text-on-surface hover:text-primary transition-colors" href="mailto:i.marwan2006@gmail.com">GMAIL : i.marwan2006@gmail.com</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="https://github.com/marwanibrahim850" rel="noopener noreferrer" target="_blank">GITHUB : marwanibrahim850</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="https://linkedin.com/in/marwan-ibrahim" rel="noopener noreferrer" target="_blank">LINKEDIN : in/marwan-ibrahim</a></div><div class="md:span-3 flex flex-col space-y-space-xs font-mono-telemetry text-mono-telemetry uppercase"><span class="text-outline mb-space-xs">[ NAV INDEX ]</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#projects-index">// 01 SELECTED WORK (03 PROJECTS)</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#experience-track">// 02 EXPERIENCE &amp; PENTAFLOW</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#engineering-pillars">// 03 CORE PILLARS</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#transmit-hub">// 04 TRANSMIT / CONTACT</a></div></div><div class="pt-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm font-mono-telemetry text-mono-telemetry uppercase text-outline border-t border-surface-container-high/40"><div class="flex items-center gap-space-md"><span>LOCUS: CAIRO / UTC+2</span><span>EDITION 2026 // MONOGRAPH</span></div><div><span>STRICT PRIVACY • RAW ARCHITECTURAL COMPOSITION • ZERO TRACKERS</span></div></div></div></footer></body></html>
