@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -9,6 +10,11 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Loading complete after initial mount
+    setIsLoading(false);
+  }, []);
   const [activeSection, setActiveSection] = useState('projects');
 
   useEffect(() => {
@@ -34,7 +40,9 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#08090a] font-body-default text-[#e8e6df] antialiased architectural-grid min-h-screen selection:bg-[#ff4d00] selection:text-[#08090a]">
+    {isLoading && <LoadingScreen />}
+        <div className="bg-[#08090a] font-body-default text-[#e8e6df] antialiased architectural-grid min-h-screen selection:bg-[#ff4d00] selection:text-[#08090a] overflow-x-hidden">
+
       {/* Fixed Architectural Header */}
       <Navbar activeSection={activeSection} />
 

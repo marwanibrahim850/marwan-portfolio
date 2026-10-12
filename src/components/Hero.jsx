@@ -20,7 +20,7 @@ export const Hero = () => {
 
         {/* Hero Typographic Monolith */}
         <div className="space-y-4 max-w-5xl">
-          <h1 className="font-display-hero text-4xl sm:text-6xl md:text-7xl lg:text-[80px] uppercase tracking-tighter text-[#e8e6df] leading-[1.0]">
+          <h1 className="font-display-hero text-4xl sm:text-6xl md:text-7xl lg:text-[80px] uppercase tracking-tighter text-[#e8e6df] leading-[1.0] text-center break-words">
             MARWAN IBRAHIM
             <br />
             <span className="text-[#ff4d00] italic font-light tracking-tight">BUILDING MODERN</span>
